@@ -55,9 +55,7 @@ function keyCommandClassToggler(options) {
     });
 
     let isClassApplied = sessionStorage.getItem('is' + capitalize(settings.toggleClass) + 'Active');
-
-    console.log(isClassApplied);
-    
+   
     if (isClassApplied === 'true') {
         root.classList.add(settings.toggleClass);
     }
