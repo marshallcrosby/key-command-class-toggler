@@ -40,10 +40,10 @@ function keyCommandClassToggler(options) {
             
             setTimeout(function () {
                 if (root.classList.contains(settings.toggleClass)) {
-                    localStorage.setItem('is' + settings.toggleClass, 'true');
+                    sessionStorage.setItem('is' + capitalize(settings.toggleClass) + 'Active', 'true');
                     alert(settings.activeMessage);
                 } else {
-                    localStorage.setItem('is' + settings.toggleClass, 'false');
+                    sessionStorage.setItem('is' + capitalize(settings.toggleClass) + 'Active', 'false');
                     alert(settings.deactiveMessage);
                 }
                 
@@ -54,7 +54,9 @@ function keyCommandClassToggler(options) {
         }
     });
 
-    let isClassApplied = localStorage.getItem('is' + capitalize(settings.toggleClass) + 'Active');
+    let isClassApplied = sessionStorage.getItem('is' + capitalize(settings.toggleClass) + 'Active');
+
+    console.log(isClassApplied);
     
     if (isClassApplied === 'true') {
         root.classList.add(settings.toggleClass);
