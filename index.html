@@ -25,7 +25,7 @@
     <span data-view-markup="associated-script: #scriptExample1; render-in-page: true"></span>
     <h2>Options (default)</h2>
     <ul>
-        <li>toggleClass: "example-class" // String</li>
+        <li>toggleClass: "class-toggler" // String</li>
         <li>keyOne: "control" // Key String</li>
         <li>keyTwo: "7" // Key String</li>
         <li>activeMessage: "Class is activated" // String</li>
@@ -35,7 +35,7 @@
     <script src="key-command-class-toggler.js"></script>
     <script id="scriptExample1">
         keyCommandClassToggler({
-            toggleClass: 'use-me',
+            toggleClass: 'example-class',
             keyOne: 'Control',
             keyTwo: '8',
         });
@@ -43,16 +43,16 @@
     
     <script>
         window.addEventListener('DOMContentLoaded', function () {
-            var checkExist = setInterval(function() {
+            var checkIfExist = setInterval(function() {
                 if (document.querySelector('.view-markup__tabs-button--js')) {
                     document.querySelector('.view-markup__tabs-button--js').click();
-                   clearInterval(checkExist);
+                   clearInterval(checkIfExist);
                 }
-             }, 100);
+             }, 10);
 
              setTimeout(function () {
-                clearInterval(checkExist);
-            }, 1000);
+                clearInterval(checkIfExist);
+            }, 5000);
         });
     </script>
 </body>

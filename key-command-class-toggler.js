@@ -1,6 +1,6 @@
 function keyCommandClassToggler(options) {  
     let settings = extend({
-        toggleClass: 'example-class',
+        toggleClass: 'class-toggled',
         keyOne: 'control',
         keyTwo: '7',
         activeMessage: 'Class is activated',
