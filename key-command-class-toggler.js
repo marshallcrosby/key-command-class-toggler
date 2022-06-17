@@ -3,6 +3,7 @@ function keyCommandClassToggler(options) {
         toggleClass: 'class-toggled',
         keyOne: 'control',
         keyTwo: '7',
+        showDialog: false,
         activeMessage: 'Class is activated',
         deactiveMessage: 'Class is deactivated'
     }, options);
@@ -41,10 +42,16 @@ function keyCommandClassToggler(options) {
             setTimeout(function () {
                 if (root.classList.contains(settings.toggleClass)) {
                     sessionStorage.setItem('is' + capitalize(settings.toggleClass) + 'Active', 'true');
-                    alert(settings.activeMessage);
+
+                    if (settings.showDialog) {
+                        alert(settings.activeMessage);
+                    }
                 } else {
                     sessionStorage.setItem('is' + capitalize(settings.toggleClass) + 'Active', 'false');
-                    alert(settings.deactiveMessage);
+
+                    if (settings.showDialog) {
+                        alert(settings.deactiveMessage);
+                    }
                 }
                 
                 keys.keyPressOne = false;
