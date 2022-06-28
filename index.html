@@ -15,22 +15,27 @@
         .lead {
             font-size: 1.3em;
         }
+        .example-class {
+            background: red;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <h1>Key command class toggler</h1>
     <p class="lead">Add/remove a class on the html tag via customizable key command</p>
     <p><strong>Demo:</strong> Press Control + 8 to toggle class</p>
-    <h2>Initialize (example)</h2>
-    <span data-view-markup="associated-script: #scriptExample1; render-in-page: true"></span>
     <h2>Options (default)</h2>
     <ul>
-        <li>toggleClass: "class-toggler" // String</li>
+        <li>toggleClass: "class-toggled" // String</li>
         <li>keyOne: "control" // Key String</li>
-        <li>keyTwo: "7" // Key String</li>
+        <li>keyTwo: "8" // Key String</li>
         <li>activeMessage: "Class is activated" // String</li>
         <li>deactiveMessage: "Class is deactivated" // String</li>
     </ul>
+    
+    <h2>Initialize (example)</h2>
+    <span data-view-markup="associated-script: #scriptExample1; render-in-page: true"></span>
     <script src="https://cdn.jsdelivr.net/gh/marshallcrosby/view-markup/dist/js/view-markup.min.js"></script>
     <script src="key-command-class-toggler.js"></script>
     <script id="scriptExample1">
@@ -48,7 +53,7 @@
                     document.querySelector('.view-markup__tabs-button--js').click();
                    clearInterval(checkIfExist);
                 }
-             }, 10);
+             }, 1);
 
              setTimeout(function () {
                 clearInterval(checkIfExist);

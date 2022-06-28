@@ -54,10 +54,9 @@ function keyCommandClassToggler(options) {
                     }
                 }
                 
-                keys.keyPressOne = false;
-                keys.keyPressTwo = false;
+                // keys.keyPressOne = false;
+                // keys.keyPressTwo = false;
             }, 100);
-
         }
     });
 
