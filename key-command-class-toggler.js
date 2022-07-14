@@ -1,3 +1,11 @@
+/*!
+    * Key Command Class Toggler v1.0.1
+    * Need description.
+    *
+    * Copyright 2022 Marshall Crosby
+    * https://marshallcrosby.com
+*/
+
 function keyCommandClassToggler(options) {  
     let settings = extend({
         toggleClass: 'class-toggled',
@@ -54,8 +62,8 @@ function keyCommandClassToggler(options) {
                     }
                 }
                 
-                // keys.keyPressOne = false;
-                // keys.keyPressTwo = false;
+                keys.keyPressOne = false;
+                keys.keyPressTwo = false;
             }, 100);
         }
     });
